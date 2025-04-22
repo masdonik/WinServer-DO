@@ -5,7 +5,7 @@
 Jalankan perintah berikut untuk mengunduh installer:
 
 ```bash
-wget https://raw.githubusercontent.com/emuhib/windows.server.DO/main/windows-server-autoinstaller.sh
+wget https://raw.githubusercontent.com/masdonik/WinServer-DO/main/windows-server-autoinstaller.sh
 ```
 
 ### 2. Berikan Izin Eksekusi pada File
@@ -52,7 +52,7 @@ Setelah QEMU berjalan, ikuti langkah berikut untuk mengakses dan mengonfigurasi 
 Setelah konfigurasi selesai, kompres image Windows Server. Ganti `xxxx` dengan versi Windows yang Anda pilih (misal, `windows10`):
 
 ```bash
-dd if=windowsxxxx.img | gzip -c > windowsxxxx.gz
+time dd if=windowsxxxx.img | pv | gzip -c > windowsxxxx.gz
 ```
 
 ### 7. Instal Apache
